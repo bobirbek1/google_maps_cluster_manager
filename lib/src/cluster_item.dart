@@ -1,4 +1,4 @@
-import 'package:google_maps_cluster_manager/google_maps_cluster_manager.dart';
+import 'package:google_maps_cluster_manager/google_maps_cluster_manager.dart' as local;
 import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
 
 mixin ClusterItem {
@@ -6,5 +6,5 @@ mixin ClusterItem {
 
   String? _geohash;
   String get geohash => _geohash ??=
-      Geohash.encode(location, codeLength: ClusterManager.precision);
+      local.Geohash.encode(location, codeLength: local.ClusterManager.precision);
 }
